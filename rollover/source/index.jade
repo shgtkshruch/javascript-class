@@ -1,0 +1,15 @@
+extend ./layout/layout.jade
+
+block  mainVars
+  - title = index.title
+  - author = 'author'
+  - description = 'description'
+  - keywords = 'keywords'
+  - page_class = 'top'
+block content
+  .header
+    .menu
+      each img in index.imgList
+        li.rollover
+          a(href="http://example.com/")
+            img(src="image/#{img.img}" alt="#{img.alt}")
